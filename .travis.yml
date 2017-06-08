@@ -1,0 +1,12 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+before_deploy:
+  - mkdir webapps
+  - cp target/ROOT.war webapps/
+
+deploy:
+  provider: azure_web_apps
+  skip_cleanup: true
