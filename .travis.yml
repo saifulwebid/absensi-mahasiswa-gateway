@@ -6,9 +6,11 @@ jdk:
 before_install:
   - chmod +x ./mvnw
 
-before_deploy:
-  - mkdir webapps
-  - cp target/ROOT.war webapps/
+install:
+  - mvnw package
+
+script:
+  - true
 
 deploy:
   provider: azure_web_apps
