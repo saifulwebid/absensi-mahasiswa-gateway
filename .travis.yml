@@ -7,7 +7,7 @@ before_install:
   - chmod +x ./mvnw
 
 install:
-  - mvnw package
+  - ./mvnw clean package
 
 script:
   - true
